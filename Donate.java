@@ -1,8 +1,4 @@
-
-
-
-
-package helloFX;
+package Combine;
 
 import java.util.Optional;
 
@@ -22,22 +18,22 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.ListView; 
-import javafx.scene.control.RadioButton; 
+import javafx.scene.control.RadioButton;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text; 
 import javafx.scene.control.TextField; 
 import javafx.scene.control.ToggleGroup;  
 import javafx.scene.control.ToggleButton; 
 import javafx.stage.Stage; 
          
-public class Donate { 
-   private static final Node NophoneLabel = null;
-private Stage primaryStage;
-private Dialog<ButtonType> s;
-
-
-public Stage donateShelter() {   
+public class Donate  { 
+   
+   public Stage donation (){   
 	
 	Text TLabel = new Text("Donation Information");
 	
@@ -108,6 +104,7 @@ public Stage donateShelter() {
       gridPane.setHgap(15);       
       
       
+      
 		
       //Setting the Grid alignment 
       gridPane.setAlignment(Pos.CENTER); 
@@ -142,7 +139,7 @@ public Stage donateShelter() {
      
       //Styling nodes   
 		
-		button2Dnt.setStyle("-fx-background-color: Grey; -fx-textfill: white;"); 
+	
       TLabel.setStyle("-fx-font: normal bold 24px 'Arial' ");
       DonatLabel.setStyle("-fx-font: normal bold 15px 'serif' "); 
       nameLabel.setStyle("-fx-font: normal bold 15px 'serif' "); 
@@ -151,27 +148,51 @@ public Stage donateShelter() {
       TypeLabel.setStyle("-fx-font: normal bold 15px 'serif' "); 
       expLabel.setStyle("-fx-font: normal bold 15px 'serif' ");
      // TLabel.setStyle("-fx-font: normal bold 15px 'serif' ");
-  
+      
+      
+      
+      button2Dnt.setOnAction(e -> new NewStage());
        
       //Setting the back ground color 
-      gridPane.setStyle("-fx-background-color: BEIGE;");
-      
-	return donateShelter();       
+      gridPane.setStyle("-fx-background-color: BEIGE;");       
        
-      //Creating a scene object 
-    
-}}
+      Stage stage = new Stage();
       
-//      //Setting title to the Stage 
-//      stage.setTitle("Donation Form"); 
-//         
-//      //Adding scene to the stage 
-//      stage.setScene(scene);  
-//      
-//      //Displaying the contents of the stage 
-////      stage.show(); 
-//   }      
-//   public static void main(String args[]){ 
-//      launch(args); 
-//   } 
-//}
+      //Creating a scene object 
+      Scene scene = new Scene(gridPane,900, 600); 
+      
+      //Setting title to the Stage 
+      stage.setTitle("Donation Form"); 
+         
+      //Adding scene to the stage 
+      stage.setScene(scene);  
+      
+      //Displaying the contents of the stage 
+      stage.show(); 
+      
+      return stage;
+   }      
+  
+}
+
+
+class NewStage {
+    
+    NewStage()
+    {
+        Stage subStage = new Stage();
+        subStage.setTitle("Alert!");
+                
+        FlowPane root = new FlowPane();
+        root.setAlignment(Pos.CENTER);
+       
+        Text mytext = new Text(20,20,"Donation Succesful");
+        mytext.setFont(Font.font("Courier",FontWeight.EXTRA_BOLD, FontPosture.ITALIC, 20));
+        root.getChildren().add(mytext);
+        
+        Scene scene = new Scene(root, 300, 200);
+        
+        subStage.setScene(scene);
+        subStage.show();
+    }
+}
