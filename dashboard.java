@@ -1,11 +1,9 @@
-package newOne;
+package Combine;
 
 import javafx.application.Application;
 import javafx.geometry.*;
-import javafx.stage.Stage;
 import javafx.stage.*;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;	 	
+
 import javafx.scene.Scene;
 import javafx.scene.image.*;
 import javafx.scene.control.*;
@@ -22,12 +20,12 @@ import javafx.scene.text.TextAlignment;
 public class dashboard extends Application{
 
 	Cat pet = new Cat("Lulu", "~18 months", "Male", "Gray", "Shelter Sri Gombak");
-	Kitten pet2 = new Kitten("Molo", "New Born", "Female", "Black&White", "Shelter Sri Gombak");
-	Adult pet3 = new Adult("Oliver", "~22 months", "Male", "Black&White", "Shelter Sri Gombak");
+	Kitten pet2 = new Kitten("Molo", "New Born", "Female", "White", "Shelter Sri Gombak");
+	Adult pet3 = new Adult("Oliver", "~22 months", "Male", "Orange", "Shelter Sri Gombak");
 	Kitten pet4 = new Kitten("Leo", "~2 months", "female", "Black&White", "Shelter Sri Gombak");
-	Adult pet5 = new Adult("Simba", "~21 months", "Male", "Black&White", "Shelter Sri Gombak");
-	Cat pet6 = new Cat("Milo", "~16 months", "Male", "Black&White", "Shelter Sri Gombak");
-	
+	Adult pet5 = new Adult("Simba", "~21 months", "Male", "Dark Orange", "Shelter Sri Gombak");
+	Cat pet6 = new Cat("Milo", "~16 months", "Male", "Black & White & Orange", "Shelter Sri Gombak");
+	 
 	
 	
 	public static void main(String[] args) {
@@ -56,7 +54,7 @@ public class dashboard extends Application{
 	    GridPane gpane = new GridPane();
 	    Button butdetails = new Button("See Deatils");
 	    gpane.add(butdetails,0,1);
-	    gpane.add(new Text("Name: Billion\nAge: Adult"), 0, 0);
+	    gpane.add(new Text("Name: Lulu\nAge: ~18 Months"), 0, 0);
 	    gpane.setAlignment(Pos.CENTER);
 	    gpane.setVgap(10);
 	    
@@ -84,8 +82,8 @@ public class dashboard extends Application{
 		
 	    GridPane gpane2 = new GridPane();
 	    Button butdetails2 = new Button("See Deatils");
-	    gpane2.add(butdetails2,0,1);
-	    gpane2.add(new Text("Name: Billion\nAge: Adult"), 0, 0);
+	    gpane2.add(butdetails2,0,1); 
+	    gpane2.add(new Text("Name: Molo\nAge: New Born"), 0, 0);
 	    gpane2.setAlignment(Pos.CENTER);
 	    gpane2.setVgap(10);
 	    
@@ -114,7 +112,7 @@ public class dashboard extends Application{
 	    GridPane gpane3 = new GridPane();
 	    Button butdetails3 = new Button("See Deatils");
 	    gpane3.add(butdetails3,0,1);
-	    gpane3.add(new Text("Name: Kiki\nAge:"), 0, 0);
+	    gpane3.add(new Text("Name: Oliver\nAge: ~22 months"), 0, 0);
 	    gpane3.setAlignment(Pos.CENTER);
 	    gpane3.setVgap(10);
 	    
@@ -143,7 +141,7 @@ public class dashboard extends Application{
 	    GridPane gpane4 = new GridPane();
 	    Button butdetails4 = new Button("See Deatils");
 	    gpane4.add(butdetails4,0,1);
-	    gpane4.add(new Text("Name: Cute\nAge:"), 0, 0);
+	    gpane4.add(new Text("Name: Leo \nAge: ~2 months"), 0, 0);
 	    gpane4.setAlignment(Pos.CENTER);
 	    gpane4.setVgap(10);
 	    
@@ -172,7 +170,7 @@ public class dashboard extends Application{
 	    GridPane gpane5 = new GridPane();
 	    Button butdetails5 = new Button("See Deatils");
 	    gpane5.add(butdetails5,0,1);
-	    gpane5.add(new Text("Name: Brown\nAge:"), 0, 0);
+	    gpane5.add(new Text("Name: Simba \nAge: ~21 months"), 0, 0);
 	    gpane5.setAlignment(Pos.CENTER);
 	    gpane5.setVgap(10);
 	    
@@ -183,6 +181,7 @@ public class dashboard extends Application{
 		
 		StackPane spane5 = new StackPane();
 		spane5.getChildren().addAll(rd5,fpane5);
+		
 	
 //pet 6 dashboard		
 		Image imaged6 = new Image ("https://i2.wp.com/www.diamondpet.com/wp-content/uploads/2016/09/20160927-PlayKitty_1200x630.jpg?w=1200&ssl=1");
@@ -201,7 +200,7 @@ public class dashboard extends Application{
 	    GridPane gpane6 = new GridPane();
 	    Button butdetails6 = new Button("See Deatils");
 	    gpane6.add(butdetails6,0,1);
-	    gpane6.add(new Text("Name: Momo\nAge:"), 0, 0);
+	    gpane6.add(new Text("Name: Milo\nAge: ~16 months"), 0, 0);
 	    gpane6.setAlignment(Pos.CENTER);
 	    gpane6.setVgap(10);
 	    
@@ -293,9 +292,10 @@ public class dashboard extends Application{
   		
   		Rectangle r = new Rectangle(900, 500);
   	    r.setStroke(Color.BLACK);
-  	    r.setFill(Color.WHITE);
+  	    r.setFill(Color.BEIGE);
   	    
   	    spanepet.getChildren().addAll(r,fpanepet);
+  	  
   	    Scene scenepet = new Scene(spanepet, 1000,600);
   		
   		
@@ -346,9 +346,10 @@ public class dashboard extends Application{
   		
   		Rectangle r2 = new Rectangle(900, 500);
   	    r2.setStroke(Color.BLACK);
-  	    r2.setFill(Color.WHITE);
+  	    r2.setFill(Color.BEIGE);
   	    
   	    spanepet2.getChildren().addAll(r2,fpanepet2);
+  
   	    Scene scenepet2 = new Scene(spanepet2, 1000,600);
   	    
  //THIRD PET
@@ -397,9 +398,10 @@ public class dashboard extends Application{
   	  		
   	  		Rectangle r3 = new Rectangle(900, 500);
   	  	    r3.setStroke(Color.BLACK);
-  	  	    r3.setFill(Color.WHITE);
+  	  	    r3.setFill(Color.BEIGE);
   	  	    
   	  	    spanepet3.getChildren().addAll(r3,fpanepet3);
+
   	  	    Scene scenepet3 = new Scene(spanepet3, 1000,600);
   	  	    
 //FOURTH PET
@@ -449,9 +451,10 @@ public class dashboard extends Application{
   		
   		Rectangle r4 = new Rectangle(900, 500);
   	    r4.setStroke(Color.BLACK);
-  	    r4.setFill(Color.WHITE);
+  	    r4.setFill(Color.BEIGE);
   	    
   	    spanepet4.getChildren().addAll(r4,fpanepet4);
+
   	    Scene scenepet4 = new Scene(spanepet4, 1000,600);
   	    
 //FIFTH PET    
@@ -500,9 +503,10 @@ public class dashboard extends Application{
 		
 		Rectangle r5 = new Rectangle(900, 500);
 	    r5.setStroke(Color.BLACK);
-	    r5.setFill(Color.WHITE);
+	    r5.setFill(Color.BEIGE);
 	    
 	    spanepet5.getChildren().addAll(r5,fpanepet5);
+
 	    Scene scenepet5 = new Scene(spanepet5, 1000,600);
   	    
 //SIXTH PET
@@ -519,7 +523,7 @@ public class dashboard extends Application{
   		viewpet6.setFitHeight(200);
   		viewpet6.setFitWidth(300);
   		
-  		hboxpet6.getChildren().add(viewpet);
+  		hboxpet6.getChildren().add(viewpet6);
   		
 		mypane6.add(new Label("Name: "), 1, 1);
   		mypane6.add(new Label(pet6.name), 2, 1);
@@ -551,9 +555,10 @@ public class dashboard extends Application{
   		
   		Rectangle r6 = new Rectangle(900, 500);
   	    r6.setStroke(Color.BLACK);
-  	    r6.setFill(Color.WHITE);
+  	    r6.setFill(Color.BEIGE);
   	    
   	    spanepet6.getChildren().addAll(r6,fpanepet6);
+
   	    Scene scenepet6 = new Scene(spanepet6, 1000,600);
 		
 //Whole
@@ -575,8 +580,27 @@ public class dashboard extends Application{
 //	    
 //	    background.getChildren().addAll(backg,dashboardLay);
 //	    
-//	    Scene myscene = new Scene(background, 1100, 650);
+//	    Scene myscene = new Scene(background, 1000, 650);
+  	    dashboardLay.setStyle("-fx-background-color: BEIGE;"); 
 	    Scene myscene = new Scene(dashboardLay, 1000, 600);
+	    
+	    regTest adopt = new regTest();
+	    Donate donatefx = new Donate();
+	    
+
+	    
+	    butadoptp.setOnAction(e -> adopt.adoption());
+	    butadoptp2.setOnAction(e -> adopt.adoption());
+	    butadoptp3.setOnAction(e -> adopt.adoption());
+	    butadoptp4.setOnAction(e -> adopt.adoption());
+	    butadoptp5.setOnAction(e -> adopt.adoption());
+	    butadoptp6.setOnAction(e -> adopt.adoption());
+	    
+	    
+
+	    
+	    donate.setOnAction(e -> donatefx.donation());
+	    
 	    
 	    butclosep.setOnAction(e ->primaryStage.setScene(myscene));
 	    butclosep2.setOnAction(e ->primaryStage.setScene(myscene));
@@ -592,9 +616,6 @@ public class dashboard extends Application{
 		
 	}
 	
-	public void login () {
-		
-	}
 	
 	
 	
