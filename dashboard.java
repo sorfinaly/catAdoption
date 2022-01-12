@@ -620,23 +620,3 @@ public class dashboard extends Application{
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
