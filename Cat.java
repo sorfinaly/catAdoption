@@ -65,8 +65,3 @@ class Adult extends Cat{
 	}
 
 }
-
-
-
-
-
