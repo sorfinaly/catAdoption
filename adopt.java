@@ -8,8 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.ScrollBar;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Alert;
@@ -32,8 +30,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-public class regTest  {
-	
+public class adoptApp  {
 
 	public Stage adoption() {
 
@@ -78,76 +75,39 @@ public class regTest  {
 //	         return donateBtn;
 //	         }
 	     
-	  
-	 		HBox hbox = new HBox(15);
-	 		ToggleGroup tg = new ToggleGroup();
-			
-			RadioButton r1 = new RadioButton("Yes");
-			RadioButton r2 = new RadioButton("No");
-			
-			r1.setToggleGroup(tg);
-			r2.setToggleGroup(tg);
-	 	    hbox.getChildren().addAll(r1, r2);
-	 	    
-	 	    HBox hbox2 = new HBox(15);
-	 		ToggleGroup tg2 = new ToggleGroup();
-			
-			RadioButton r12 = new RadioButton("Yes");
-			RadioButton r22 = new RadioButton("No");
-			
-			r12.setToggleGroup(tg2);
-			r22.setToggleGroup(tg2);
-	 	    hbox2.getChildren().addAll(r12, r22);
-	 	    
-	 	 
-	    
-//	     	ScrollPane scroll(GridPane pane) {
-//				ScrollPane scrollPane = new ScrollPane(pane);
-//				
-//				scrollPane.setPrefSize(600, 200);
-//				scrollPane.setContent(pane);
-//				scrollPane.setFitToHeight(true);
-//				scrollPane.setPannable(true);
-//				scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
-//	    		 
-//				return scrollPane; 
-//	    	 }
-	    	 
-//	    	 private ScrollBar scrollB() {
-//	    		 ScrollBar s = new ScrollBar();
-//	    		 s.setMin(0);
-//	    		 s.setValue(200);;
-//	    		 s.setOrientation(Orientation.VERTICAL);
-//	    		 s.setValue(110);
-//	    		 s.setUnitIncrement(12);
-//	    		 s.setBlockIncrement(10);
-//	    		 
-//	    		 return s;
-//	    	 }
+	//yes or no RadioButton
+	   private HBox answer() {
+ 		HBox hbox = new HBox(15);
+ 		ToggleGroup tg = new ToggleGroup();
 		
-	
+		RadioButton r1 = new RadioButton("Yes");
+		RadioButton r2 = new RadioButton("No");
 		
-//		ScrollPane scrollPane = scroll(grid);
-//		ScrollBar scroll = scrollB();
-		
+		r1.setToggleGroup(tg);
+		r2.setToggleGroup(tg);
+ 	    hbox.getChildren().addAll(r1, r2);
+ 	    
+ 	    return hbox;
+     }
+	 
 			
 		Text header = new Text("Contact Information");
 		header.setFont(Font.font("Arial", FontWeight.LIGHT, 25));
 		pane.add(header, 0, 0);
-		
+		//name
 		Label labName = new Label("Full Name: ");
 		pane.add(labName , 0, 1);
 		
 		TextField txtName = new TextField();
 		txtName.setPrefWidth(500);
 		pane.add(txtName, 1, 1);
-		
+		//phone number
 		Label labPhone = new Label("Phone Number: ");
 		pane.add(labPhone, 0, 2);
 		
 		TextField txtPhone = new TextField();
 		pane.add(txtPhone, 1, 2);
-		
+		//gender
 		Label labGender = new Label("Gender: ");
 		pane.add(labGender , 0, 3);
 	     
@@ -159,7 +119,7 @@ public class regTest  {
 	    female.setToggleGroup(group);
 	    hboxsex.getChildren().addAll(male, female);
 	    pane.add(hboxsex, 1, 3);
-	    
+	    //dob
 	    Label labdob = new Label("Date of Birth: ");
 	    pane.add(labdob, 0, 4);
 	    
@@ -177,7 +137,7 @@ public class regTest  {
 	    dobYears.setPromptText("Year");
 	    hbox1.getChildren().addAll(dobDates, dobMonths, dobYears);
 	    pane.add(hbox1, 1, 4);
-	    
+	    //address
 	    Label labAddr = new Label("Address: ");
 	    pane.add(labAddr, 0, 5);
 	    
@@ -185,36 +145,35 @@ public class regTest  {
 		txtAddr.setPrefWidth(100);
 		txtAddr.setPrefHeight(20);
 		pane.add(txtAddr, 1, 5);
-	    
+	    //email
 	    Label labEmail = new Label("Email: ");
 	    pane.add(labEmail, 0, 6);
 	    
 	    TextField txtEmail = new TextField();
 		pane.add(txtEmail, 1, 6);
 		
-	    
+	    //new section about cat's new family
 		
-		Text section1 = new Text("About pet's new family");
-		section1.setFont(Font.font("Arial", FontWeight.LIGHT, 25));
-		pane.add(section1, 0, 8);
-		
-		Label labReason = new Label("Why are you interested "
-				+ "in finding new pet?");
-	    pane.add(labReason, 0, 10);
+	Text section1 = new Text("About Cat's new family");
+	section1.setFont(Font.font("Arial", FontWeight.LIGHT, 25));
+	pane.add(section1, 0, 8);
+		//reason why adopt
+	Label labReason = new Label("Why are you interested "
+				+ "in finding new cat?");
+	    	pane.add(labReason, 0, 10);
 	    
-	    TextField txtReason = new TextField();
+	    	TextField txtReason = new TextField();
 	  		pane.add(txtReason, 1, 10);
-		
-
-	  		Label labFirstCat = new Label("is this your first time"
-				+ " raising a pet? ");
+		//first time raising a cat
+	  	Label labFirstCat = new Label("is this your first time"
+				+ " raising a cat? ");
 	    pane.add(labFirstCat, 0, 11);
 	    
 	    //adding yes or no
-//	    HBox confirm = answer();
-	    pane.add(hbox, 1, 11);
+	    HBox confirm = answer();
+	    pane.add(confirm, 1, 11);
 	    
-
+		//number of person in household - adult, children
 		Label labAdults = new Label("How many people in your home? ");
 	    pane.add(labAdults, 0, 12);
     
@@ -227,16 +186,16 @@ public class regTest  {
 	    person.getChildren().addAll(txtAdult, txtChildren);
 	    pane.add(person, 1, 12);
 	   
-		
+	//allergy owner
 		Label labAllergyOwner = new Label("Does anyone in your house have allergies to "
 			+ "either cat or dog? ");
 	    pane.add(labAllergyOwner, 0, 13);
 	    
-//	    HBox confirm1 = answer();
-	    pane.add(hbox2, 1, 13);
+	    HBox confirm2 = answer();
+	    pane.add(confirm2, 1, 13);
 		
 		//Insert calendar
-		Label adoptDate = new Label("Enter date to adopt the pet from the shelter: ");
+		Label adoptDate = new Label("Enter date to adopt the cat from the shelter: ");
 	    pane.add(adoptDate, 0, 14);
 	    
 	    HBox adopt = new HBox(15);
@@ -259,7 +218,6 @@ public class regTest  {
 		pane.add(checkbox, 0, 15);
 //		
 //		//submit button and option button
-//		
 		Button submitButton = new Button("Submit");
         submitButton.setPrefHeight(40);
         submitButton.setDefaultButton(true);
@@ -311,8 +269,7 @@ public class regTest  {
         return adoptstage;
 	}
 	
-	
-	
+
 	
 	
 
