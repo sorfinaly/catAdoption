@@ -19,7 +19,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
 
-public class examplewithinheritance extends Application{
+public class dashboard extends Application{
 
 	Cat pet = new Cat("Lulu", "~18 months", "Male", "Gray", "Shelter Sri Gombak");
 	Kitten pet2 = new Kitten("Molo", "New Born", "Female", "Black&White", "Shelter Sri Gombak");
