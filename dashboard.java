@@ -1,9 +1,7 @@
-package Combine;
+package Combine.copy;
 
-import javafx.application.Application;
 import javafx.geometry.*;
 import javafx.stage.*;
-
 import javafx.scene.Scene;
 import javafx.scene.image.*;
 import javafx.scene.control.*;
@@ -17,7 +15,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
 
-public class dashboard extends Application{
+public class examplewithinheritance {
 
 	Cat pet = new Cat("Lulu", "~18 months", "Male", "Gray", "Shelter Sri Gombak");
 	Kitten pet2 = new Kitten("Molo", "New Born", "Female", "White", "Shelter Sri Gombak");
@@ -28,37 +26,30 @@ public class dashboard extends Application{
 	 
 	
 	
-	public static void main(String[] args) {
-		launch(args);
-
-	}
-
-	
-	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public Stage dashboard() {
 		
 //pet 1 dashboard
-	    Image imaged = new Image ("https://upload.wikimedia.org/wikipedia/commons/8/8c/British_Shorthair_cat._Female._18_months_old.jpg");
+	    	Image imaged = new Image ("https://upload.wikimedia.org/wikipedia/commons/8/8c/British_Shorthair_cat._Female._18_months_old.jpg");
 		ImageView viewimaged = new ImageView(imaged);
 		viewimaged.setFitHeight(80);
 		viewimaged.setFitWidth(80);
 		
 		Rectangle rd = new Rectangle();
 		rd.setStroke(Color.BLACK);
-	    rd.setFill(Color.WHITE);
-	    rd.setHeight(130);
-	    rd.setWidth(230);
-	    rd.setArcHeight(20);
-	    rd.setArcWidth(20);
-	    
-	    GridPane gpane = new GridPane();
-	    Button butdetails = new Button("See Deatils");
-	    gpane.add(butdetails,0,1);
-	    gpane.add(new Text("Name: Lulu\nAge: ~18 Months"), 0, 0);
-	    gpane.setAlignment(Pos.CENTER);
-	    gpane.setVgap(10);
-	    
-	    FlowPane fpane = new FlowPane();
+		rd.setFill(Color.WHITE);
+		rd.setHeight(130);
+		rd.setWidth(230);
+		rd.setArcHeight(20);
+		rd.setArcWidth(20);
+
+		GridPane gpane = new GridPane();
+		Button butdetails = new Button("See Deatils");
+		gpane.add(butdetails,0,1);
+		gpane.add(new Text("Name: Lulu\nAge: ~18 Months"), 0, 0);
+		gpane.setAlignment(Pos.CENTER);
+		gpane.setVgap(10);
+
+		FlowPane fpane = new FlowPane();
 		fpane.getChildren().addAll(viewimaged,gpane);
 		fpane.setAlignment(Pos.CENTER);
 		fpane.setHgap(20);
@@ -74,20 +65,20 @@ public class dashboard extends Application{
 	    
 		Rectangle rd2 = new Rectangle();
 		rd2.setStroke(Color.BLACK);
-	    rd2.setFill(Color.WHITE);
-	    rd2.setHeight(130);
-	    rd2.setWidth(230);
-	    rd2.setArcHeight(20);
-	    rd2.setArcWidth(20);
-		
-	    GridPane gpane2 = new GridPane();
-	    Button butdetails2 = new Button("See Deatils");
-	    gpane2.add(butdetails2,0,1); 
-	    gpane2.add(new Text("Name: Molo\nAge: New Born"), 0, 0);
-	    gpane2.setAlignment(Pos.CENTER);
-	    gpane2.setVgap(10);
-	    
-	    FlowPane fpane2 = new FlowPane();
+		rd2.setFill(Color.WHITE);
+		rd2.setHeight(130);
+		rd2.setWidth(230);
+		rd2.setArcHeight(20);
+		rd2.setArcWidth(20);
+
+		GridPane gpane2 = new GridPane();
+		Button butdetails2 = new Button("See Deatils");
+		gpane2.add(butdetails2,0,1); 
+		gpane2.add(new Text("Name: Molo\nAge: New Born"), 0, 0);
+		gpane2.setAlignment(Pos.CENTER);
+		gpane2.setVgap(10);
+
+		FlowPane fpane2 = new FlowPane();
 		fpane2.getChildren().addAll(viewimaged2,gpane2);
 		fpane2.setAlignment(Pos.CENTER);
 		fpane2.setHgap(20);
@@ -103,20 +94,20 @@ public class dashboard extends Application{
 	    
 		Rectangle rd3 = new Rectangle();
 		rd3.setStroke(Color.BLACK);
-	    rd3.setFill(Color.WHITE);
-	    rd3.setHeight(130);
-	    rd3.setWidth(230);
-	    rd3.setArcHeight(20);
-	    rd3.setArcWidth(20);
-	    
-	    GridPane gpane3 = new GridPane();
-	    Button butdetails3 = new Button("See Deatils");
-	    gpane3.add(butdetails3,0,1);
-	    gpane3.add(new Text("Name: Oliver\nAge: ~22 months"), 0, 0);
-	    gpane3.setAlignment(Pos.CENTER);
-	    gpane3.setVgap(10);
-	    
-	    FlowPane fpane3 = new FlowPane();
+		rd3.setFill(Color.WHITE);
+		rd3.setHeight(130);
+		rd3.setWidth(230);
+		rd3.setArcHeight(20);
+		rd3.setArcWidth(20);
+
+		GridPane gpane3 = new GridPane();
+		Button butdetails3 = new Button("See Deatils");
+		gpane3.add(butdetails3,0,1);
+		gpane3.add(new Text("Name: Oliver\nAge: ~22 months"), 0, 0);
+		gpane3.setAlignment(Pos.CENTER);
+		gpane3.setVgap(10);
+
+		FlowPane fpane3 = new FlowPane();
 		fpane3.getChildren().addAll(viewimaged3,gpane3);
 		fpane3.setAlignment(Pos.CENTER);
 		fpane3.setHgap(20);
@@ -132,20 +123,20 @@ public class dashboard extends Application{
 	    
 		Rectangle rd4 = new Rectangle();
 		rd4.setStroke(Color.BLACK);
-	    rd4.setFill(Color.WHITE);
-	    rd4.setHeight(130);
-	    rd4.setWidth(230);
-	    rd4.setArcHeight(20);
-	    rd4.setArcWidth(20);
-		
-	    GridPane gpane4 = new GridPane();
-	    Button butdetails4 = new Button("See Deatils");
-	    gpane4.add(butdetails4,0,1);
-	    gpane4.add(new Text("Name: Leo \nAge: ~2 months"), 0, 0);
-	    gpane4.setAlignment(Pos.CENTER);
-	    gpane4.setVgap(10);
-	    
-	    FlowPane fpane4 = new FlowPane();
+		rd4.setFill(Color.WHITE);
+		rd4.setHeight(130);
+		rd4.setWidth(230);
+		rd4.setArcHeight(20);
+		rd4.setArcWidth(20);
+
+		GridPane gpane4 = new GridPane();
+		Button butdetails4 = new Button("See Deatils");
+		gpane4.add(butdetails4,0,1);
+		gpane4.add(new Text("Name: Leo \nAge: ~2 months"), 0, 0);
+		gpane4.setAlignment(Pos.CENTER);
+		gpane4.setVgap(10);
+
+		FlowPane fpane4 = new FlowPane();
 		fpane4.getChildren().addAll(viewimaged4,gpane4);
 		fpane4.setAlignment(Pos.CENTER);
 		fpane4.setHgap(20);
@@ -161,20 +152,20 @@ public class dashboard extends Application{
 	    
 		Rectangle rd5 = new Rectangle();
 		rd5.setStroke(Color.BLACK);
-	    rd5.setFill(Color.WHITE);
-	    rd5.setHeight(130);
-	    rd5.setWidth(230);
-	    rd5.setArcHeight(20);
-	    rd5.setArcWidth(20);;
-		
-	    GridPane gpane5 = new GridPane();
-	    Button butdetails5 = new Button("See Deatils");
-	    gpane5.add(butdetails5,0,1);
-	    gpane5.add(new Text("Name: Simba \nAge: ~21 months"), 0, 0);
-	    gpane5.setAlignment(Pos.CENTER);
-	    gpane5.setVgap(10);
-	    
-	    FlowPane fpane5 = new FlowPane();
+		rd5.setFill(Color.WHITE);
+		rd5.setHeight(130);
+		rd5.setWidth(230);
+		rd5.setArcHeight(20);
+		rd5.setArcWidth(20);;
+
+		GridPane gpane5 = new GridPane();
+		Button butdetails5 = new Button("See Deatils");
+		gpane5.add(butdetails5,0,1);
+		gpane5.add(new Text("Name: Simba \nAge: ~21 months"), 0, 0);
+		gpane5.setAlignment(Pos.CENTER);
+		gpane5.setVgap(10);
+
+		FlowPane fpane5 = new FlowPane();
 		fpane5.getChildren().addAll(viewimaged5,gpane5);
 		fpane5.setAlignment(Pos.CENTER);
 		fpane5.setHgap(20);
@@ -191,20 +182,20 @@ public class dashboard extends Application{
 		
 		Rectangle rd6 = new Rectangle();
 		rd6.setStroke(Color.BLACK);
-	    rd6.setFill(Color.WHITE);
-	    rd6.setHeight(130);
-	    rd6.setWidth(230);
-	    rd6.setArcHeight(20);
-	    rd6.setArcWidth(20);
-	    
-	    GridPane gpane6 = new GridPane();
-	    Button butdetails6 = new Button("See Deatils");
-	    gpane6.add(butdetails6,0,1);
-	    gpane6.add(new Text("Name: Milo\nAge: ~16 months"), 0, 0);
-	    gpane6.setAlignment(Pos.CENTER);
-	    gpane6.setVgap(10);
-	    
-	    FlowPane fpane6 = new FlowPane();
+		rd6.setFill(Color.WHITE);
+		rd6.setHeight(130);
+		rd6.setWidth(230);
+		rd6.setArcHeight(20);
+		rd6.setArcWidth(20);
+
+		GridPane gpane6 = new GridPane();
+		Button butdetails6 = new Button("See Deatils");
+		gpane6.add(butdetails6,0,1);
+		gpane6.add(new Text("Name: Milo\nAge: ~16 months"), 0, 0);
+		gpane6.setAlignment(Pos.CENTER);
+		gpane6.setVgap(10);
+
+		FlowPane fpane6 = new FlowPane();
 		fpane6.getChildren().addAll(viewimaged6,gpane6);
 		fpane6.setAlignment(Pos.CENTER);
 		fpane6.setHgap(20);
@@ -221,30 +212,26 @@ public class dashboard extends Application{
 		gpane1.add(spane5, 1, 1);
 		gpane1.add(spane6, 2, 1);
 		
-		Button donate = new Button ("DONATE NOW");
-		Button login = new Button ("LOGIN NOW");
 		gpane1.setAlignment(Pos.CENTER);
 		gpane1.setHgap(-130);
 		gpane1.setVgap(50);
+		
+		Button donate = new Button ("DONATE NOW");
+		Button login = new Button ("LOGIN NOW");
+
+		HBox laybutton = new HBox(50);
+		laybutton.getChildren().addAll(donate, login);
+		laybutton.setAlignment(Pos.CENTER);
 		
 		Label title = new Label("PETS");
 
 		title.setFont(Font.font("Courier",FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 80));
 		title.setTextAlignment(TextAlignment.JUSTIFY);
 		title.setTextFill(Color.BLACK);
-		
-		HBox laybuttonlogin = new HBox(50);
-		laybuttonlogin.getChildren().addAll(donate, login);
-		laybuttonlogin.setAlignment(Pos.CENTER);
-		
-		
-		VBox dashboardLaylogin = new VBox(50);
-		dashboardLaylogin.getChildren().addAll(title,gpane1,laybuttonlogin);
-		dashboardLaylogin.setAlignment(Pos.TOP_CENTER);		
-		
-		VBox dashboardLay = new VBox(50);
-		dashboardLay.getChildren().addAll(title,gpane1,donate);
-		dashboardLay.setAlignment(Pos.TOP_CENTER);
+
+		VBox dashboardLaydonate = new VBox(50);
+		dashboardLaydonate.getChildren().addAll(title,gpane1,donate);
+		dashboardLaydonate.setAlignment(Pos.TOP_CENTER);
 		
 //FIRST PET
 		GridPane mypane = new GridPane();
@@ -291,12 +278,12 @@ public class dashboard extends Application{
   		fpanepet.setHgap(50);
   		
   		Rectangle r = new Rectangle(900, 500);
-  	    r.setStroke(Color.BLACK);
-  	    r.setFill(Color.BEIGE);
+  	    	r.setStroke(Color.BLACK);
+  	    	r.setFill(Color.BEIGE);
   	    
-  	    spanepet.getChildren().addAll(r,fpanepet);
+  	    	spanepet.getChildren().addAll(r,fpanepet);
   	  
-  	    Scene scenepet = new Scene(spanepet, 1000,600);
+  	    	Scene scenepet = new Scene(spanepet, 1000,600);
   		
   		
 //SECOND PET
@@ -345,64 +332,64 @@ public class dashboard extends Application{
   		fpanepet2.setHgap(50);
   		
   		Rectangle r2 = new Rectangle(900, 500);
-  	    r2.setStroke(Color.BLACK);
-  	    r2.setFill(Color.BEIGE);
+  	    	r2.setStroke(Color.BLACK);
+  	    	r2.setFill(Color.BEIGE);
   	    
-  	    spanepet2.getChildren().addAll(r2,fpanepet2);
+  	    	spanepet2.getChildren().addAll(r2,fpanepet2);
   
-  	    Scene scenepet2 = new Scene(spanepet2, 1000,600);
+  	    	Scene scenepet2 = new Scene(spanepet2, 1000,600);
   	    
  //THIRD PET
-  			GridPane mypane3 = new GridPane();
-  			StackPane spanepet3 = new StackPane();
-  			mypane3.setAlignment(Pos.CENTER);
-  	  		mypane3.setHgap(15);
-  	  		mypane3.setVgap(15);
+		GridPane mypane3 = new GridPane();
+		StackPane spanepet3 = new StackPane();
+		mypane3.setAlignment(Pos.CENTER);
+		mypane3.setHgap(15);
+		mypane3.setVgap(15);
 
-  	  		HBox hboxpet3 = new HBox(5);
-  	  		
-  	  		Image imagepet3 = new Image ("https://i2.wp.com/pawsomekitty.com/wp-content/uploads/Why-are-cats-so-lazy.png?resize=766%2C463");
-  	  		ImageView viewpet3 = new ImageView(imagepet3);
-  	  		viewpet3.setFitHeight(200);
-  	  		viewpet3.setFitWidth(300);
-  	  		
-  	  		hboxpet3.getChildren().add(viewpet3);
-  	  		
-  			mypane3.add(new Label("Name: "), 1, 1);
-  	  		mypane3.add(new Label(pet3.name), 2, 1);
+		HBox hboxpet3 = new HBox(5);
 
-  	  		mypane3.add(new Label ("Age: "), 1, 2);
-  	  		mypane3.add(new Label(pet3.age), 2, 2);
-  	  		
-  	  		mypane3.add(new Label("Sex: "),1,3);
-  	  		mypane3.add(new Label(pet3.sex), 2, 3);
-  	  		
-  	  		mypane3.add(new Label ("Colours: "), 1,4);
-  	  		mypane3.add(new Label(pet3.colour), 2, 4);
-  	  	
-  	  		mypane3.add(new Label ("Pickup: "), 1,5);
-  	  		mypane3.add(new Label(pet3.pickup), 2, 5);
-  	  		
-  	  		mypane3.add(new Label ("Description: "), 1, 6);
-  	  		mypane3.add(new Label(pet3.Description()), 2, 6);
-  	  	
-	  	  	Button butclosep3 = new Button ("Close");
-	  		mypane3.add(butclosep3,1,7);
-	  		Button butadoptp3 = new Button ("Adopt");
-	  		mypane3.add(butadoptp3, 2, 7);
-  		
-  	  		FlowPane fpanepet3 = new FlowPane();
-  	  		fpanepet3.getChildren().addAll(viewpet3,mypane3);
-  	  		fpanepet3.setAlignment(Pos.CENTER);
-  	  		fpanepet3.setHgap(50);
-  	  		
-  	  		Rectangle r3 = new Rectangle(900, 500);
-  	  	    r3.setStroke(Color.BLACK);
-  	  	    r3.setFill(Color.BEIGE);
-  	  	    
-  	  	    spanepet3.getChildren().addAll(r3,fpanepet3);
+		Image imagepet3 = new Image ("https://i2.wp.com/pawsomekitty.com/wp-content/uploads/Why-are-cats-so-lazy.png?resize=766%2C463");
+		ImageView viewpet3 = new ImageView(imagepet3);
+		viewpet3.setFitHeight(200);
+		viewpet3.setFitWidth(300);
 
-  	  	    Scene scenepet3 = new Scene(spanepet3, 1000,600);
+		hboxpet3.getChildren().add(viewpet3);
+
+		mypane3.add(new Label("Name: "), 1, 1);
+		mypane3.add(new Label(pet3.name), 2, 1);
+
+		mypane3.add(new Label ("Age: "), 1, 2);
+		mypane3.add(new Label(pet3.age), 2, 2);
+
+		mypane3.add(new Label("Sex: "),1,3);
+		mypane3.add(new Label(pet3.sex), 2, 3);
+
+		mypane3.add(new Label ("Colours: "), 1,4);
+		mypane3.add(new Label(pet3.colour), 2, 4);
+
+		mypane3.add(new Label ("Pickup: "), 1,5);
+		mypane3.add(new Label(pet3.pickup), 2, 5);
+
+		mypane3.add(new Label ("Description: "), 1, 6);
+		mypane3.add(new Label(pet3.Description()), 2, 6);
+
+		Button butclosep3 = new Button ("Close");
+		mypane3.add(butclosep3,1,7);
+		Button butadoptp3 = new Button ("Adopt");
+		mypane3.add(butadoptp3, 2, 7);
+
+		FlowPane fpanepet3 = new FlowPane();
+		fpanepet3.getChildren().addAll(viewpet3,mypane3);
+		fpanepet3.setAlignment(Pos.CENTER);
+		fpanepet3.setHgap(50);
+
+		Rectangle r3 = new Rectangle(900, 500);
+		r3.setStroke(Color.BLACK);
+		r3.setFill(Color.BEIGE);
+
+		spanepet3.getChildren().addAll(r3,fpanepet3);
+
+		Scene scenepet3 = new Scene(spanepet3, 1000,600);
   	  	    
 //FOURTH PET
   	  	    
@@ -450,15 +437,15 @@ public class dashboard extends Application{
   		fpanepet4.setHgap(50);
   		
   		Rectangle r4 = new Rectangle(900, 500);
-  	    r4.setStroke(Color.BLACK);
-  	    r4.setFill(Color.BEIGE);
+  	  	r4.setStroke(Color.BLACK);
+  	 	r4.setFill(Color.BEIGE);
   	    
-  	    spanepet4.getChildren().addAll(r4,fpanepet4);
+  	   	spanepet4.getChildren().addAll(r4,fpanepet4);
 
-  	    Scene scenepet4 = new Scene(spanepet4, 1000,600);
+  	   	Scene scenepet4 = new Scene(spanepet4, 1000,600);
   	    
 //FIFTH PET    
-  	    GridPane mypane5 = new GridPane();
+  		GridPane mypane5 = new GridPane();
 		StackPane spanepet5 = new StackPane();
 		mypane5.setAlignment(Pos.CENTER);
 		mypane5.setHgap(15);
@@ -502,15 +489,15 @@ public class dashboard extends Application{
 		fpanepet5.setHgap(50);
 		
 		Rectangle r5 = new Rectangle(900, 500);
-	    r5.setStroke(Color.BLACK);
-	    r5.setFill(Color.BEIGE);
+	  	r5.setStroke(Color.BLACK);
+	  	r5.setFill(Color.BEIGE);
 	    
-	    spanepet5.getChildren().addAll(r5,fpanepet5);
+	  	spanepet5.getChildren().addAll(r5,fpanepet5);
 
-	    Scene scenepet5 = new Scene(spanepet5, 1000,600);
+	 	Scene scenepet5 = new Scene(spanepet5, 1000,600);
   	    
 //SIXTH PET
-	    GridPane mypane6 = new GridPane();
+	   	GridPane mypane6 = new GridPane();
 		StackPane spanepet6 = new StackPane();
 		mypane6.setAlignment(Pos.CENTER);
   		mypane6.setHgap(15);
@@ -554,69 +541,70 @@ public class dashboard extends Application{
   		fpanepet6.setHgap(50);
   		
   		Rectangle r6 = new Rectangle(900, 500);
-  	    r6.setStroke(Color.BLACK);
-  	    r6.setFill(Color.BEIGE);
+  	 	r6.setStroke(Color.BLACK);
+  	   	r6.setFill(Color.BEIGE);
   	    
-  	    spanepet6.getChildren().addAll(r6,fpanepet6);
+  	   	spanepet6.getChildren().addAll(r6,fpanepet6);
 
-  	    Scene scenepet6 = new Scene(spanepet6, 1000,600);
+  	  	Scene scenepet6 = new Scene(spanepet6, 1000,600);
 		
-//Whole
-  	    
-  	    butdetails.setOnAction(e ->primaryStage.setScene(scenepet));
-  	    butdetails2.setOnAction(e ->primaryStage.setScene(scenepet2));
-  	    butdetails3.setOnAction(e ->primaryStage.setScene(scenepet3));
-  	    butdetails4.setOnAction(e ->primaryStage.setScene(scenepet4));
-  	    butdetails5.setOnAction(e ->primaryStage.setScene(scenepet5));
-  	    butdetails6.setOnAction(e ->primaryStage.setScene(scenepet6));
-	    
-  	    //background Picture
-//	    StackPane background = new StackPane();
-//	    Image backgroundpic = new Image ("https://i.pinimg.com/750x/a8/06/7f/a8067f465fcfacdb0224ae9d8315c973.jpg");
-//
-//	    ImageView backg = new ImageView(backgroundpic);
-//	    backg.setFitHeight(650);
-//	    backg.setFitWidth(1100);
-//	    
-//	    background.getChildren().addAll(backg,dashboardLay);
-//	    
-//	    Scene myscene = new Scene(background, 1000, 650);
-  	    dashboardLay.setStyle("-fx-background-color: BEIGE;"); 
-	    Scene myscene = new Scene(dashboardLay, 1000, 600);
-	    
-	    regTest adopt = new regTest();
-	    Donate donatefx = new Donate();
-	    
+//ACtion
+		Stage primaryStage = new Stage();
 
-	    
-	    butadoptp.setOnAction(e -> adopt.adoption());
-	    butadoptp2.setOnAction(e -> adopt.adoption());
-	    butadoptp3.setOnAction(e -> adopt.adoption());
-	    butadoptp4.setOnAction(e -> adopt.adoption());
-	    butadoptp5.setOnAction(e -> adopt.adoption());
-	    butadoptp6.setOnAction(e -> adopt.adoption());
-	    
-	    
+		butdetails.setOnAction(e ->primaryStage.setScene(scenepet));
+		butdetails2.setOnAction(e ->primaryStage.setScene(scenepet2));
+		butdetails3.setOnAction(e ->primaryStage.setScene(scenepet3));
+		butdetails4.setOnAction(e ->primaryStage.setScene(scenepet4));
+		butdetails5.setOnAction(e ->primaryStage.setScene(scenepet5));
+		butdetails6.setOnAction(e ->primaryStage.setScene(scenepet6));
 
-	    
-	    donate.setOnAction(e -> donatefx.donation());
-	    
-	    
-	    butclosep.setOnAction(e ->primaryStage.setScene(myscene));
-	    butclosep2.setOnAction(e ->primaryStage.setScene(myscene));
-	    butclosep3.setOnAction(e ->primaryStage.setScene(myscene));
-	    butclosep4.setOnAction(e ->primaryStage.setScene(myscene));
-	    butclosep5.setOnAction(e ->primaryStage.setScene(myscene));
-	    butclosep6.setOnAction(e ->primaryStage.setScene(myscene));
-		
+
+		dashboardLaydonate.setStyle("-fx-background-color: BEIGE;"); 
+		Scene myscene = new Scene(dashboardLaydonate, 1000, 600);
+
+		regTest adopt = new regTest();
+		Donate donatefx = new Donate();
+
+		butadoptp.setOnAction(e -> adopt.adoption());
+		butadoptp2.setOnAction(e -> adopt.adoption());
+		butadoptp3.setOnAction(e -> adopt.adoption());
+		butadoptp4.setOnAction(e -> adopt.adoption());
+		butadoptp5.setOnAction(e -> adopt.adoption());
+		butadoptp6.setOnAction(e -> adopt.adoption());
+
+		donate.setOnAction(e -> donatefx.donation());
+
+		butclosep.setOnAction(e ->primaryStage.setScene(myscene));
+		butclosep2.setOnAction(e ->primaryStage.setScene(myscene));
+		butclosep3.setOnAction(e ->primaryStage.setScene(myscene));
+		butclosep4.setOnAction(e ->primaryStage.setScene(myscene));
+		butclosep5.setOnAction(e ->primaryStage.setScene(myscene));
+		butclosep6.setOnAction(e ->primaryStage.setScene(myscene));
+
 		primaryStage.setTitle("PETS");
 		primaryStage.setScene(myscene);	
 		primaryStage.show();
-		
-		
+
+		return primaryStage;
 	}
-	
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
