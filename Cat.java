@@ -23,8 +23,9 @@ public class Cat {
 	}
 	
 	public String Description() {
-//		System.out.println("Love to play ball and active");
+		
 		String des = "Love to play ball and active";
+		
 		return des;
 	}
 
@@ -34,13 +35,13 @@ public class Cat {
 class Kitten extends Cat {
 	
 	Kitten(String name, String age, String sex, String colour, String pickup){
+		
 		super(name,age, sex, colour, pickup);
 	}
 	
 	@Override
 	public String Description() {
 		
-//		System.out.println(" -- Hyperactive and love to play with ball & rope -- ");
 		String des = "Hyperactive and love to play with ball & rope";
 		
 		return des;
@@ -52,15 +53,16 @@ class Kitten extends Cat {
 class Adult extends Cat{
 	
 	Adult(String name, String age, String sex, String colour, String pickup){
+		
 		super(name,age, sex, colour, pickup);
 	}
 	
 	@Override
 	public String Description() {
-//		System.out.println("-- Passive and love to laying down --");
-	String des = "Passive and love to laying down";
+		
+		String des = "Passive and love to laying down";
 	
-	return des;
+		return des;
 	
 	}
 
